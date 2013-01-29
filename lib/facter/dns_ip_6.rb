@@ -14,7 +14,7 @@ Facter.add("dns_ip_6") do
     end
     host_output = `host #{hostname}`
     v6_entries = []
-    host_output.each do |line|
+    host_output.each_line do |line|
       v6_entries << line if line =~ /.*IPv6.*/
     end
     v6_addrs = []
