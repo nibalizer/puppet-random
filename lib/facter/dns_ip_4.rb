@@ -1,3 +1,8 @@
+#
+# This fact prints a single ipv4 address from reverse dns lookup
+#
+# (c) 2013 Spencer Krum 
+# Released under Apache2
 Facter.add("dns_ip_4") do
   setcode do
     os = Facter.value('kernel')
